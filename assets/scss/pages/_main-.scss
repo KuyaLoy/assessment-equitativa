@@ -142,6 +142,26 @@
       @media (max-width: 767px) {
         max-width: 100%;
       }
+
+      #jobApplicationForm {
+        .job-item {
+          border: 2px solid transparent;
+          cursor: pointer;
+          padding: 10px;
+
+          img {
+            max-width: 100%;
+          }
+
+          input[type="radio"] {
+            display: none;
+          }
+        }
+
+        .job-item.active {
+          border-color: red;
+        }
+      }
     }
   }
 }
