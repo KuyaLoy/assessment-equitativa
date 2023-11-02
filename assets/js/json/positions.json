@@ -1,0 +1,24 @@
+{
+  "job_positions": [
+    {
+      "title": "Software Engineer",
+      "expire_date": "2023-12-31"
+    },
+    {
+      "title": "Data Analyst",
+      "expire_date": "2023-11-30"
+    },
+    {
+      "title": "UX Designer",
+      "expire_date": "2023-12-15"
+    },
+    {
+      "title": "Product Manager",
+      "expire_date": "2023-11-25"
+    },
+    {
+      "title": "Marketing Specialist",
+      "expire_date": "2023-12-10"
+    }
+  ]
+}

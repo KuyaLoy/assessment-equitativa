@@ -24,74 +24,89 @@
     <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
   <body>
-    <div class="container-fluid career-wrapper bg-dark">
-      <div class="row row-height">
-        <div class="col-xl-4 col-lg-4 content-left">
-          <div class="brand-content">
-            <!-- branding -->
-            <a href="index.html" id="logo" class="index-front"
-              ><img src="./assets/images/logo.svg" alt=""
-            /></a>
+    <div class="career-wrapper-2 bg-dark">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.svg" alt="" />
+      </a>
+      <div class="cw2-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 cus-col">
+              <span class="text-cont">
+                <h1 class="lh-base">
+                  Join ENATA and take Control of Your Career.
+                </h1>
+                <img src="./assets/images/job.png" alt="" />
 
-            <div id="social">
-              <ul>
-                <li>
-                  <a href="#0"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#0"><i class="fa fa-linkedin-square"></i></a>
-                </li>
-                <li>
-                  <a href="#0"><i class="fa fa-google"></i></a>
-                </li>
-              </ul>
+                <span class="lh-base"
+                  >Manage Your Job Applications with Our User-Friendly
+                  Recruitment Platform. Track Your Progress, and Land Your Dream
+                  Job.</span
+                >
+              </span>
             </div>
-            <!-- branding -->
+            <div class="col-md-6 cus-col">
+              <div class="container">
+                <h1>Multi-Step Form</h1>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 0%"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
 
-            <div class="swiper-container no-swipe">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./assets/images/slider/pic1.jpg" alt="Image 1" />
+                <form id="verification-form">
+                  <h2>Step 1: Email Verification</h2>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <button class="btn btn-primary" id="check-email-btn">
+                    Check Email
+                  </button>
+                </form>
+
+                <form id="second-form" style="display: none">
+                  <h2>Step 1: Choose a Job Position</h2>
+                  <div id="step-1">
+                    <div class="form-group">
+                      <label for="job-positions">Select a job position:</label>
+                      <div id="job-positions">
+                        <!-- Job positions will be added dynamically from JavaScript -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="step-2" style="display: none">
+                    <!-- Step 2 Fields Go Here -->
+                  </div>
+                  <!-- Add more steps as needed -->
+                  <button class="btn btn-primary" id="next-btn">Next</button>
+                  <button class="btn btn-secondary" id="prev-btn">
+                    Previous
+                  </button>
+                </form>
+
+                <div id="success-message" style="display: none">
+                  <h2>Success!</h2>
+                  <p>Your application has been submitted.</p>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/slider/pic2.jpg" alt="Image 2" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/slider/pic3.jpg" alt="Image 3" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/images/slider/pic4.jpg" alt="Image 4" />
+                <div id="email-exists-message" style="display: none">
+                  Email already exists in our database. Please wait for HR to
+                  contact you.
                 </div>
               </div>
             </div>
-            <div class="text-content bg-dark bg-opacity-50">
-              <h1>Work With Us</h1>
-              <h2 class="mt-3 lh-sm">
-                Join ENATA and take Control of Your Career.
-              </h2>
-              <p class="mt-3 lh-base">
-                Manage Your Job Applications with Our User-Friendly Recruitment
-                Platform. Track Your Progress, and Land Your Dream Job.
-              </p>
-            </div>
           </div>
-        </div>
-        <div class="col-xl-8 col-lg-8 content-right">
-          <div class="identify-wrapper">
-            <h2>LET US VERIFY YOU FIRST</h2>
-            <div class="verify-email">
-              <form id="verify-form">
-                <input
-                  class="email-text"
-                  type="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <input type="submit" value="VERIFY" class="verify-button" />
-              </form>
-            </div>
-          </div>
-          <div id="verification-message" style="display: none"></div>
         </div>
       </div>
     </div>
@@ -103,6 +118,6 @@
     <script src="./assets/library/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="./assets/js/career.js"></script>
+    <script src="./assets/js/career-2.js"></script>
   </body>
 </html>
