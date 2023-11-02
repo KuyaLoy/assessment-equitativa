@@ -17,10 +17,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
   <body>
-    <div class="container-fluid career-wrapper">
+    <div class="container-fluid career-wrapper bg-dark">
       <div class="row row-height">
         <div class="col-xl-4 col-lg-4 content-left">
           <div class="brand-content">
@@ -73,7 +77,21 @@
           </div>
         </div>
         <div class="col-xl-8 col-lg-8 content-right">
-          <div class="multistep-wrapper"></div>
+          <div class="identify-wrapper">
+            <h2>LET US VERIFY YOU FIRST</h2>
+            <div class="verify-email">
+              <form id="verify-form">
+                <input
+                  class="email-text"
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <input type="submit" value="VERIFY" class="verify-button" />
+              </form>
+            </div>
+          </div>
+          <div id="verification-message" style="display: none"></div>
         </div>
       </div>
     </div>

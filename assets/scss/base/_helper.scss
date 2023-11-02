@@ -6,12 +6,6 @@ body {
 
 .row-height {
   height: 100vh;
-
-  @include u.breakpoint-max(medium) {
-    height: auto;
-
-    min-height: 30vh;
-  }
 }
 
 .index-back {
