@@ -144,7 +144,7 @@
             overflow-y: scroll;
             @media (max-width: 991px) {
               overflow: unset;
-              max-height: unset;
+              height: unset;
             }
             ul.list-position {
               padding-left: 20px;
@@ -184,7 +184,6 @@
                 .position-description {
                   max-height: 0;
                   overflow: hidden;
-                  padding: u.rem(20);
                 }
               }
             }
