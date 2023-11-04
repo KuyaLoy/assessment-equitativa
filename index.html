@@ -11,113 +11,35 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
     <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
   <body>
-    <div class="career-wrapper-2 bg-dark">
-      <a href="/" class="logo">
-        <img src="./assets/images/logo.svg" alt="" />
-      </a>
-      <div class="cw2-content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 cus-col">
-              <span class="text-cont">
-                <h1 class="lh-base">
-                  Join ENATA and take Control of Your Career.
-                </h1>
-                <img src="./assets/images/job.png" alt="" />
-
-                <span class="lh-base"
-                  >Manage Your Job Applications with Our User-Friendly
-                  Recruitment Platform. Track Your Progress, and Land Your Dream
-                  Job.</span
-                >
-              </span>
-            </div>
-            <div class="col-md-6 cus-col">
-              <div class="container">
-                <h1>Multi-Step Form</h1>
-                <div class="progress">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    style="width: 0%"
-                    aria-valuenow="0"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-
-                <form id="verification-form">
-                  <h2>Step 1: Email Verification</h2>
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      required
-                    />
-                  </div>
-                  <button class="btn btn-primary" id="check-email-btn">
-                    Check Email
-                  </button>
-                </form>
-
-                <form id="second-form" style="display: none">
-                  <h2>Step 1: Choose a Job Position</h2>
-                  <div id="step-1">
-                    <div class="form-group">
-                      <label for="job-positions">Select a job position:</label>
-                      <div id="job-positions">
-                        <!-- Job positions will be added dynamically from JavaScript -->
-                      </div>
-                    </div>
-                  </div>
-                  <div id="step-2" style="display: none">
-                    <!-- Step 2 Fields Go Here -->
-                  </div>
-                  <!-- Add more steps as needed -->
-                  <button class="btn btn-primary" id="next-btn">Next</button>
-                  <button class="btn btn-secondary" id="prev-btn">
-                    Previous
-                  </button>
-                </form>
-
-                <div id="success-message" style="display: none">
-                  <h2>Success!</h2>
-                  <p>Your application has been submitted.</p>
-                </div>
-                <div id="email-exists-message" style="display: none">
-                  Email already exists in our database. Please wait for HR to
-                  contact you.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <nav>
+      <input type="checkbox" id="show" />
+      <label for="show" class="menu-btn">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+      <div class="nav-wrapper">
+        <ul class="menu">
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+          <li><a href="#">link 5</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
+
+    <header class="career-header-1"></header>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
     <script src="./assets/library/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="./assets/js/career-2.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
