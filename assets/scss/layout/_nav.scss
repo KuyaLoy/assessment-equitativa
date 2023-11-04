@@ -28,21 +28,22 @@ nav {
     height: u.rem(50);
     width: u.rem(50);
     border-radius: 50%;
-    font-size: u.rem(34);
+    font-size: u.rem(28);
     cursor: pointer;
-    color: #2b3035;
-    //background: #2b3035;
+    color: #fff;
+    background: #2b3035;
     transition: all 0.3s ease;
 
     @media (max-width: u.rem(991)) {
-      color: #fff;
+      background-color: rgba(0, 0, 0, 0);
       opacity: 0.6;
-      top: u.rem(8);
-      right: u.rem(24);
-
-      &:hover {
-        opacity: 1;
-      }
+      top: 15px;
+      right: 30px;
+      color: #fff;
+      font-size: u.rem(24);
+      height: u.rem(35);
+      width: u.rem(35);
+      line-height: u.rem(35);
     }
   }
   .nav-wrapper {
@@ -51,7 +52,7 @@ nav {
     left: 0;
     height: 100%;
     width: 100%;
-    // background: linear-gradient(-135deg, #2b3035, #c1c7cd);
+    //background: linear-gradient(-135deg, #2b3035, #c1c7cd);
     clip-path: circle(u.rem(25) at calc(100% - u.rem(45)) u.rem(45));
     transition: all 0.3s ease-in-out;
 
