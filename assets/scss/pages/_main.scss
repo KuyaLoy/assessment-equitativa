@@ -1,1 +1,208 @@
 @use "../utils" as u;
+
+.career-wrapper-1 {
+  .content-left {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+
+    // @media (max-width: u.rem(991)) {
+    //   min-height: 30vh;
+    // }
+
+    .brand-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      @media (max-width: u.rem(991)) {
+        height: unset;
+      }
+
+      a#logo {
+        position: absolute;
+        left: u.rem(20);
+        top: u.rem(20);
+        display: block;
+        z-index: 3;
+        img {
+          width: 100%;
+          max-width: clamp(7.5rem, 5.8108rem + 5.4054vw, 12.5rem);
+        }
+      }
+
+      #social {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 3;
+
+        @media (max-width: u.rem(991)) {
+          right: 70px;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          li {
+            float: left;
+            margin: 0 u.rem(10);
+            list-style: none;
+            a {
+              color: #fff;
+              opacity: 0.6;
+              text-align: center;
+              line-height: 35px;
+              display: block;
+              font-size: u.rem(20);
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              -webkit-transition: all 0.3s ease-in-out;
+              -ms-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        .swiper-slide {
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+
+      .text-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: u.rem(50) u.rem(50);
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        backdrop-filter: blur(5px);
+
+        @include u.breakpoint-max(medium) {
+          padding: u.rem(75) u.rem(50) u.rem(50) u.rem(50);
+        }
+
+        h1 {
+          font-size: clamp(1.875rem, 1.7483rem + 0.4054vw, 2.25rem);
+          font-weight: bold;
+        }
+        h2 {
+          font-size: clamp(0.875rem, 0.6639rem + 0.6757vw, 1.5rem);
+          font-weight: 500;
+          width: 100%;
+        }
+
+        p {
+          font-size: clamp(0.75rem, 0.6655rem + 0.2703vw, 1rem);
+        }
+      }
+    }
+  }
+  .content-right {
+    .apply-form {
+      margin-top: u.rem(100);
+      margin-inline: auto;
+
+      @media (max-width: u.rem(991)) {
+        margin-top: u.rem(30);
+      }
+
+      .form-wrapper {
+        margin-top: u.rem(75);
+        form {
+          .steps {
+            height: 57.5vh;
+            overflow-y: scroll;
+            @media (max-width: 991px) {
+              overflow: unset;
+              max-height: unset;
+            }
+            ul.list-position {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+
+              li {
+                &:not(:last-child) {
+                  margin-bottom: u.rem(20);
+                }
+                label {
+                  width: 100%;
+                  padding: 20px;
+                  cursor: pointer;
+                  border-radius: u.rem(5);
+                  box-shadow: 0px 4.76522px 11.91304px 0px rgba(0, 0, 0, 0.08);
+
+                  p {
+                    margin-right: 5px;
+                  }
+
+                  &:has(> input:checked) {
+                    display: block;
+                    outline: 2px red solid;
+                  }
+                  &:has(> input:checked) ~ .position-description {
+                    max-height: 100vh;
+                    animation: slideDown 2s forwards;
+                  }
+                  &:has(> input:not(:checked)) ~ .position-description {
+                    animation: slideUp 0.5s forwards;
+                  }
+                  input {
+                    display: none;
+                  }
+                }
+                .position-description {
+                  max-height: 0;
+                  overflow: hidden;
+                  padding: u.rem(20);
+                }
+              }
+            }
+          }
+          .navigation-button {
+            margin-top: u.rem(25);
+            padding-top: u.rem(25);
+            border-top: 1px solid #2b3035;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input[type="submit"] {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

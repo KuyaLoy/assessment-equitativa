@@ -1,5 +1,21 @@
 @use "../utils" as u;
 
-body {
-  font-family: "Poppins", sans-serif;
+.row-height {
+  height: 100vh;
+  @media (max-width: 991px) {
+    height: unset;
+  }
+}
+
+.index-back {
+  z-index: -1;
+}
+.index-middle {
+  z-index: 0;
+}
+.index-front {
+  z-index: 1;
+}
+.index-nav {
+  z-index: 3;
 }
