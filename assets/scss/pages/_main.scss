@@ -219,6 +219,7 @@
                   &:has(> input:checked) ~ .position-description {
                     max-height: 100vh;
                     animation: slideDown 2s forwards;
+                    margin: 20px;
                   }
                   &:has(> input:not(:checked)) ~ .position-description {
                     animation: slideUp 0.5s forwards;
@@ -230,9 +231,13 @@
                 .position-description {
                   max-height: 0;
                   overflow: hidden;
-                  margin: 20px;
+                  font-size: clamp(0.75rem, 0.706rem + 0.1408vw, 0.875rem);
                 }
               }
+            }
+            input:focus {
+              outline: 0px !important;
+              box-shadow: none !important;
             }
           }
           .navigation-button {
@@ -362,6 +367,176 @@
               .bootstrap-select {
                 width: 20%;
               }
+            }
+          }
+          #step-3 {
+            .profile-upload {
+              text-align: center;
+              .avatar-upload {
+                position: relative;
+                max-width: 205px;
+                margin: 25px auto;
+                .avatar-edit {
+                  position: absolute;
+                  right: 12px;
+                  z-index: 1;
+                  top: 10px;
+                  input {
+                    display: none;
+                    + label {
+                      display: inline-block;
+                      width: 34px;
+                      height: 34px;
+                      margin-bottom: 0;
+                      border-radius: 100%;
+                      background: #ffffff;
+                      border: 1px solid transparent;
+                      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                      cursor: pointer;
+                      font-weight: normal;
+                      transition: all 0.2s ease-in-out;
+                      &:hover {
+                        background: #f1f1f1;
+                        border-color: #d6d6d6;
+                      }
+                      &:after {
+                        content: "\f040";
+                        font-family: "FontAwesome";
+                        color: #757575;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                        right: 0;
+                        text-align: center;
+                        margin: auto;
+                      }
+                    }
+                  }
+                }
+                .avatar-preview {
+                  width: 192px;
+                  height: 192px;
+                  position: relative;
+                  border-radius: 100%;
+                  border: 6px solid #f8f8f8;
+                  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+                  > div {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+              }
+              span {
+                margin-left: -5px;
+                color: grey;
+              }
+            }
+            hr {
+              max-width: 50%;
+              margin-inline: auto;
+
+              @media (max-width: 767px) {
+                max-width: 80%;
+              }
+            }
+
+            .file-upload-container {
+              border: 2px dashed #cccccc;
+              padding: 20px;
+              text-align: center;
+              .file-upload {
+                p {
+                  width: 62%;
+                  line-height: normal;
+                  margin: 0 auto;
+                  font-weight: 600;
+                }
+              }
+            }
+
+            .file-list {
+              list-style-type: none;
+              padding: 0;
+              .file-list-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid #e1e1e1;
+                padding: 10px;
+                margin: 5px 0;
+              }
+            }
+          }
+          #step-4 {
+            .form-group {
+              label {
+                text-align: center;
+                display: block;
+                font-size: clamp(1.375rem, 1.243rem + 0.4225vw, 1.75rem);
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: clamp(1.25rem, 1.0299rem + 0.7042vw, 1.875rem);
+              }
+              textarea {
+                padding: clamp(1.25rem, 0.5898rem + 2.1127vw, 3.125rem);
+              }
+            }
+          }
+          #step-5 {
+            .verify-form {
+              box-shadow: 0px 4.76522px 11.91304px 0px rgba(0, 0, 0, 0.08);
+              .profile-pic {
+                .col-12 {
+                  text-align: center;
+                  img {
+                    width: 175px;
+                    height: 175px;
+                    border-radius: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border: 2px solid #000;
+                  }
+
+                  h4 {
+                    font-weight: 700;
+                    font-size: u.rem(20);
+                    margin-top: u.rem(20);
+                  }
+                }
+              }
+              #fullname-view {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+              }
+              p,
+              span {
+                font-size: 14px;
+                width: 100%;
+                border-bottom: 1px solid rgb(0, 0, 0);
+                padding: 15px 20px;
+                line-height: normal;
+                overflow: hidden;
+                @media (margin: 767px) {
+                  padding: 10px;
+                }
+              }
+              p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              span {
+                display: block;
+              }
+            }
+            .acknowledge-wrapper {
+              line-height: normal;
+              font-size: 14px;
             }
           }
         }
