@@ -11,6 +11,15 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/bootstrap-select-country@4.0.0/dist/css/bootstrap-select-country.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
@@ -19,7 +28,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css"
     />
     <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
@@ -612,7 +621,144 @@
                   </ul>
                 </div>
                 <div class="steps" id="step-2">
-                  <h1>step 2</h1>
+                  <div class="step-2-form pt-2">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12 mb-5 title-wrapper">
+                              <h6 class="mb-2 pb-1 title-text">Title:</h6>
+                              <div class="title-group">
+                                <div class="title-cont">
+                                  <input type="radio" name="title" id="MR" />
+                                  <label for="MR">Mr.</label>
+                                </div>
+
+                                <div class="title-cont">
+                                  <input type="radio" name="title" id="MISS" />
+                                  <label for="MISS">Miss</label>
+                                </div>
+
+                                <div class="title-cont">
+                                  <input type="radio" name="title" id="MRS" />
+                                  <label for="MRS">Mrs.</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-5 title-wrapper">
+                              <div class="form-floating input-group-lg">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="FirstName"
+                                  placeholder="First name"
+                                  autocomplete="off"
+                                />
+                                <label for="FirstName">First name</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-5 title-wrapper">
+                              <div class="form-floating input-group-lg">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="LastName"
+                                  placeholder="Last name"
+                                  autocomplete="off"
+                                />
+                                <label for="LastName">Last name</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-5 tel-wrapper">
+                              <div class="input-group input-group-lg">
+                                <input
+                                  id="MobilePhone"
+                                  type="tel"
+                                  class="form-control"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                              <div class="input-group input-group-lg">
+                                <span class="input-group-text">@</span>
+                                <div class="form-floating input-group-lg">
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    id="Email"
+                                    placeholder="Password"
+                                  />
+                                  <label for="Email">Email</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-5">
+                              <div
+                                class="input-group input-group-lg selectpickerCus-wrapper"
+                              >
+                                <span class="input-group-text"
+                                  >Nationality(ies)</span
+                                >
+                                <!-- <select
+                                  class="selectpicker selCus"
+                                  multiple
+                                  aria-label="Default select example"
+                                  data-live-search="true"
+                                >
+                                  <option value="">---</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                  <option value="4">Four</option>
+                                </select> -->
+                                <select
+                                  class="selCus selectpicker countrypicker"
+                                  data-flag="true"
+                                  multiple
+                                  data-live-search="true"
+                                >
+                                  <option value="" selected>---</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                              <div
+                                class="input-group input-group-lg selectpickerCus-wrapper salWrapper"
+                              >
+                                <span class="input-group-text">Salary</span>
+                                <div class="form-floating input-group-lg">
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="salary"
+                                    placeholder="Monthly"
+                                  />
+                                  <label for="salary">Monthly</label>
+                                </div>
+                                <select
+                                  class="selectpicker selCus"
+                                  aria-label="Default select example"
+                                  data-live-search="true"
+                                >
+                                  <option value="">---</option>
+                                  <option value="1">AED</option>
+                                  <option value="2">USD</option>
+                                  <option value="3">EUR</option>
+                                  <option value="4">AUD</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="steps" id="step-3">
                   <h1>step 3</h1>
@@ -645,7 +791,11 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/library/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+
+    <script src="./assets/library/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+    <script src="//unpkg.com/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./assets/js/script.js"></script>

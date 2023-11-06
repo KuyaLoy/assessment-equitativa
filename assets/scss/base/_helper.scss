@@ -23,3 +23,12 @@
 .hide {
   display: none;
 }
+.form-floating > label {
+  top: u.rem(5);
+}
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  top: 0px;
+}
