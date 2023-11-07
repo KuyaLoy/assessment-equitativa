@@ -182,6 +182,11 @@
                       h3 {
                         font-size: clamp(1.125rem, 0.993rem + 0.4225vw, 1.5rem);
                         font-weight: 700;
+
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 65%;
                       }
                       ul {
                         display: flex;
@@ -220,6 +225,10 @@
                     max-height: 100vh;
                     animation: slideDown 2s forwards;
                     margin: 20px;
+
+                    @include u.breakpoint-max(medium) {
+                      margin: 20px 10px;
+                    }
                   }
                   &:has(> input:not(:checked)) ~ .position-description {
                     animation: slideUp 0.5s forwards;
@@ -414,6 +423,10 @@
               gap: 0px;
               height: 100%;
               width: 100%;
+
+              @include u.breakpoint-max(medium) {
+                grid-template-columns: 40% 60%;
+              }
               .bootstrap-select {
                 width: 100%;
               }
@@ -567,6 +580,17 @@
                 text-align: center;
                 font-size: 18px;
                 font-weight: 600;
+
+                text-transform: capitalize;
+
+                i {
+                  &.actives {
+                    text-transform: lowercase;
+                    &:first-letter {
+                      text-transform: uppercase;
+                    }
+                  }
+                }
               }
               p,
               span {

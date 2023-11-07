@@ -12,6 +12,12 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
+function isNumberValid(input) {
+  // Use regular expressions to check if the input contains only numbers or only letters
+  const isNumber = /^[1-9\-\+\(\)]+$/;
+  return isNumber.test(input);
+}
+
 let telInput = $("#MobilePhone");
 
 telInput.intlTelInput({
@@ -58,6 +64,7 @@ $(document).ready(function () {
 
         const emptyFields = [];
         const emailField = $('[name="Email"]').val();
+        const phoneField = $('[name="Phone"]').val();
         const titleChecked = $('[name="Title"]:checked').length > 0;
 
         if (!titleChecked) {
@@ -72,6 +79,10 @@ $(document).ready(function () {
               `[name="${fieldName}"] option:selected`
             ).val();
             if (!selectedCountry) {
+              emptyFields.push(requiredFields[fieldName]);
+            }
+          } else if (fieldName === "Phone") {
+            if (!isNumberValid(phoneField)) {
               emptyFields.push(requiredFields[fieldName]);
             }
           } else if (fieldName === "Email") {
@@ -139,6 +150,8 @@ $(document).ready(function () {
         $(".next").addClass("hide");
         $(".send-application").addClass("active");
         displayFormData();
+
+        capitalizeFirstLetterOfEachWord("#fullname-view");
         break;
 
       default:
@@ -278,7 +291,9 @@ function displayFormData() {
   if (attachment) {
     $("#attachment-view")
       .empty()
-      .append('<i class="fas fa-paperclip"></i> ' + attachment);
+      .append(
+        '<i class="fa fa-paperclip" aria-hidden="true"></i> ' + attachment
+      );
   } else {
     $("#attachment-view").empty();
   }
@@ -328,3 +343,14 @@ $(document).ready(function () {
     }, 2000);
   });
 });
+
+function capitalizeFirstLetterOfEachWord(elementId) {
+  var text = $(elementId).text();
+  var words = text.split(" ");
+  var transformedText = words
+    .map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+  $(elementId).text(transformedText);
+}
