@@ -26,9 +26,15 @@
 .form-floating > label {
   top: u.rem(5);
 }
-.form-floating > .form-control-plaintext ~ label,
+.form-control .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
   top: 0px;
+}
+.input-group-lg > .btn,
+.input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text {
+  font-size: clamp(0.875rem, 0.743rem + 0.4225vw, 1.25rem);
 }

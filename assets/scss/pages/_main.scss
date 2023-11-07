@@ -232,6 +232,40 @@
                   max-height: 0;
                   overflow: hidden;
                   font-size: clamp(0.75rem, 0.706rem + 0.1408vw, 0.875rem);
+                  line-height: normal;
+
+                  h4 {
+                    font-size: u.rem(18);
+                    margin-bottom: u.rem(10);
+                    font-weight: 700;
+                  }
+                  p {
+                    font-size: u.rem(16);
+                    margin-bottom: u.rem(16);
+                  }
+
+                  p:has(> strong) {
+                    display: inline-block;
+                    margin-bottom: u.rem(4);
+                    font-weight: 600;
+                  }
+
+                  ol {
+                    list-style: decimal;
+                  }
+                  ul {
+                    list-style: disc;
+                  }
+                  ol,
+                  ul {
+                    list-style-position: inside;
+                    margin-bottom: u.rem(15);
+                    li {
+                      font-size: u.rem(14);
+                      margin-bottom: u.rem(5);
+                      padding-left: u.rem(10);
+                    }
+                  }
                 }
               }
             }
@@ -336,14 +370,22 @@
                 width: 100%;
                 input[type="tel"] {
                   height: 58px;
+                  font-size: clamp(0.875rem, 0.743rem + 0.4225vw, 1.25rem);
+
+                  &::placeholder {
+                    font-size: u.rem(16);
+                    //color: rgb(33, 37, 41);
+                  }
                 }
                 .country-list {
                   z-index: 3;
                 }
               }
             }
+
             .selectpickerCus-wrapper {
               flex-wrap: unset;
+
               .input-group-text {
                 font-size: u.rem(16);
               }
@@ -360,6 +402,19 @@
                 }
               }
               .selCus.bootstrap-select > .dropdown-toggle {
+                width: 100%;
+              }
+            }
+            .selectNat {
+              display: grid;
+
+              grid-template-rows: 1fr;
+              grid-template-columns: 30% 70%;
+
+              gap: 0px;
+              height: 100%;
+              width: 100%;
+              .bootstrap-select {
                 width: 100%;
               }
             }
