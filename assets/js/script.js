@@ -14,7 +14,7 @@ function isValidEmail(email) {
 
 function isNumberValid(input) {
   // Use regular expressions to check if the input contains only numbers or only letters
-  const isNumber = /^[1-9\-\+\(\)]+$/;
+  const isNumber = /^[0-9\-\+\(\)]+$/;
   return isNumber.test(input);
 }
 
