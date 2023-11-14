@@ -183,10 +183,12 @@
                         font-size: clamp(1.125rem, 0.993rem + 0.4225vw, 1.5rem);
                         font-weight: 700;
 
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        width: 65%;
+                        @include u.breakpoint-max(medium) {
+                          white-space: nowrap;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          width: 65%;
+                        }
                       }
                       ul {
                         display: flex;
